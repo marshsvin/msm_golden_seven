@@ -1,0 +1,31 @@
+<% @alldirectors.each do |details| %>
+<div class="thumbnail">
+
+<img src = "<%= details.image_url %>">
+
+<div>
+  <%= details.name %>
+</div>
+
+<div>
+  <%= details.dob %>
+</div>
+
+<div>
+<%= details.bio %>
+</div>
+
+<a class ="btn btn-default btn-block" href ="http://localhost:3000/directors/<%= details.id %>">
+  Show details
+</a>
+
+<a class ="btn btn-default btn-block" href = "/directors/<%= details.id %>/edit">
+  Edit
+</a>
+
+<a class ="btn btn-default btn-block" href ="/delete_director/<%= details.id %>">
+  Delete
+</a>
+</div>
+
+<% end  %>
